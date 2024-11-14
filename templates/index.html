@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orchestra Layout</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Items</h3>
+        {% for item in items %}
+        <div class="item" draggable="true" id="{{ item.name | lower }}">
+            {{ item.name }} (Available: <span id="{{ item.name | lower }}-count">{{ item.limit }}</span>)
+        </div>
+        {% endfor %}
+    </div>
+    <div class="stage" id="stage">
+        <h3>Stage</h3>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
