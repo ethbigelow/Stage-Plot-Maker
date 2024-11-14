@@ -1,0 +1,58 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#workspace {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+}
+
+#chair-pool {
+    width: 20%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#seating-chart {
+    flex-grow: 1;
+    min-height: 400px;
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.chair {
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border: 1px solid #aaa;
+    margin: 5px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    transition: border 0.3s ease;
+}
+
+.chair.selected {
+    border: 2px solid red;
+}
+
+.draggable {
+    cursor: move;
+}
