@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Plot Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Stage Plot Tool</h1>
+
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Admin Login</h2>
+        <input type="password" id="admin-password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="admin-panel" style="display: none;">
+        <h2>Admin Settings</h2>
+        <label>Chairs: <input type="number" id="chair-limit" value="5"></label><br>
+        <label>Tables: <input type="number" id="table-limit" value="2"></label><br>
+        <label>Music Stands: <input type="number" id="stand-limit" value="10"></label><br>
+        <label>Horn Shields: <input type="number" id="shield-limit" value="3"></label><br>
+        <button onclick="updateLimits()">Update Limits</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Stage Area -->
+    <div id="stage-area">
+        <div id="chair" class="draggable-item" data-type="chair" draggable="true">Chair</div>
+        <div id="table" class="draggable-item" data-type="table" draggable="true">Table</div>
+        <div id="stand" class="draggable-item" data-type="stand" draggable="true">Music Stand</div>
+        <div id="shield" class="draggable-item" data-type="shield" draggable="true">Horn Shield</div>
+    </div>
+
+    <button onclick="exportToPDF()">Export to PDF</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
